@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: pdfprocessbackend
+    build:
+      context: ./
+    ports:
+      - "7050:5000"
+  
+  frontend:
+    container_name: pdfprocessfrontend
+    build:
+      context: ./pdf-spitter-ui
+    ports:
+      - "7051:80"
