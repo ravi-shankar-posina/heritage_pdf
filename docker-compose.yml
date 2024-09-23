@@ -11,6 +11,6 @@ services:
   frontend:
     container_name: pdfprocessfrontend
     build:
-      context: ./pdf-spitter-ui
+      context: ./pdf-splitter-ui
     ports:
       - "7051:80"
