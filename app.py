@@ -18,6 +18,14 @@ def extract_employee_info(text):
         return f"{emp_no}_{name}_VPFY24"
     return None
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello"
+
+@app.route('/favicon.ico', methods=['GET'])
+def favicon():
+    return "", 204
+
 @app.route('/split-pdf', methods=['POST'])
 def split_pdf():
     if 'file' not in request.files:
